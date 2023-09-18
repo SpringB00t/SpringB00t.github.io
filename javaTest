@@ -1,0 +1,47 @@
+public class TestC {
+
+    public static void main(String[] args) {
+        test1(13);
+        test2(13,0.8, true);
+    }
+
+    /*** 题目1
+     * @author xj
+     * @param sum 总价
+     */
+    public static void test1 (int sum) {
+        int price = 0;
+        for (int i = 0,j = sum; (i + j == sum) && j >= 0; i++, j--) {
+            price = i*8 + j*13;
+            System.out.println(price);
+            System.out.println(i);//苹果
+            System.out.println(j);//草莓
+            System.out.println("------------");
+        }
+    }
+
+    /*** 题目2-4
+     * @author xj
+     * @param sum 总价
+     * @param zhekou3 题目3参数
+     * @param zhekou4 题目4参数
+     */
+    public static void test2 (int sum, double zhekou3, boolean zhekou4) {
+        double price = 0;
+        for (int i = 0; i <= sum; i++) {
+            for (int j = 0,k = sum - i - j; (i + j + k == sum) && k >= 0; j++, k--) {
+                price = i * 8 + j * 13 * zhekou3 + k * 20;
+                if (price >= 100 && zhekou4) {
+                    price-= 10;
+                }
+                System.out.println(price);
+                System.out.println(i);//苹果
+                System.out.println(j);//草莓
+                System.out.println(k);//芒果
+                System.out.println("------------");
+            }
+        }
+
+
+    }
+}

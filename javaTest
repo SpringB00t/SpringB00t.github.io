@@ -7,12 +7,12 @@ public class TestC {
 
     /*** 题目1
      * @author xj
-     * @param sum 总价
+     * @param sum 总重量
      */
     public static void test1 (int sum) {
         int price = 0;
         for (int i = 0,j = sum; (i + j == sum) && j >= 0; i++, j--) {
-            price = i*8 + j*13;
+            price = i*8 + j*13;//总价格
             System.out.println(price);
             System.out.println(i);//苹果
             System.out.println(j);//草莓
@@ -22,7 +22,7 @@ public class TestC {
 
     /*** 题目2-4
      * @author xj
-     * @param sum 总价
+     * @param sum 总重量
      * @param zhekou3 题目3参数
      * @param zhekou4 题目4参数
      */
@@ -34,7 +34,7 @@ public class TestC {
                 if (price >= 100 && zhekou4) {
                     price-= 10;
                 }
-                System.out.println(price);
+                System.out.println(price);//总价格
                 System.out.println(i);//苹果
                 System.out.println(j);//草莓
                 System.out.println(k);//芒果
